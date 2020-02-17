@@ -1,0 +1,47 @@
+#contact {
+    background-color: rgba(221, 88, 55, 0.2);
+    position: relative;
+}
+
+#contact .contact-wrap {
+    padding-top: 8%;
+}
+
+.contact-wrap #contactForm {
+    padding-bottom: 4%;
+}
+
+#contact .contact-widget {
+    padding: 0;
+}
+
+#contact .contact-list {
+    border: 1px solid #1b5d9b;
+    background-color: #1b5d9b;
+    color:white;
+}
+
+#contact #contactForm #sendMessageButton {
+    background-color: rgb(209, 84, 65);
+}
+
+#contact .contact-widget li{
+    background: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#contact .contact-widget li span {
+    color: white;
+}
+
+#contact .contact-widget i{
+    padding-right: 3em;
+}
+
+#contact .contact-widget .location {
+    display: flex;
+    flex-direction: column;
+}
+

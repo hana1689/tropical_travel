@@ -1,0 +1,66 @@
+.parallax {
+    background: 
+    linear-gradient(
+        rgba(216, 144, 126, 0.855), 
+        rgba(216, 144, 126, 0.855)
+    ),url('../images/Events/background-4.jpg');
+    min-height: 1000x;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#events #event-item {
+    padding-top: 8%;
+    padding-bottom: 2%;
+}
+
+.event-info .background_image{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 360px;
+    margin-bottom: 0.5em;
+}
+
+.event-info .date_container{
+    position: absolute;
+    top: 4%;
+    left: 5%;
+}
+
+.event-info .date_content{
+    width: 90px;
+    height: 90px;
+    background-color: #053086;
+    background: linear-gradient(to right, #053086, #59ace4);
+}
+
+.event-info .date_content .date_day, .date_month {
+    color: #FFFFFF;
+    line-height: 0.75;
+}
+
+.event-info .date_content .date_month {
+    margin-top: 1em;
+}
+
+.event-info .event_content .event_title {
+    color: #053086;
+    line-height: 1.2;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: -7px
+}
+
+.event-info .event_content .event_location, .event_time {
+    color: rgb(2, 102, 16);
+    margin-top: 1%;
+    font-weight: 500;
+}
+
+.event-info .event_content .event_text {
+    margin-top: 5%;
+}
+

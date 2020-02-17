@@ -1,0 +1,965 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/OpenSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+        url('../fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Black.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Black.woff') format('woff');
+    font-weight: black;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+        url('../fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Black.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+/* Text Styles */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+    color: #053086;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.65em;
+    color: #053086;
+}
+
+p, span, .page-section .blockquote {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.15em;
+    line-height: 1.5;
+    color: #373438;
+}
+
+.btn {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.page-section {
+    padding: 8% 0 8%;
+}
+
+/* Global Styles */
+.section-heading {
+    letter-spacing: normal;
+    padding-bottom: 1.5%;
+}
+
+.section-heading::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: rgb(209, 84, 65);
+    bottom: 3%;
+    left: calc(50% - 25px);
+}
+
+.section-wrap {
+    padding-top: 50px;
+}
+
+.page-section h2 {
+    font-weight: 800;
+}
+
+/* Navigation */
+
+nav.navbar-section {
+    position: absolute;
+    left: 0;
+    top: 73px;
+    z-index: 3;
+    width: 100%;
+    background-color: #053086;
+    min-height: 65px;
+}
+
+.navbar .navbar-brand {
+    position: absolute;
+    width: 280px;
+    left: 60px;
+}
+
+.navbar .navbar-brand img{
+    border-radius: 30px;
+}
+
+.navbar .navbar-nav {
+    position: absolute;
+    right: 60px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: white;
+}
+
+.navbar .navbar-nav .nav-item {
+    padding-right: 25px;
+}
+
+nav.navbar .navbar-toggler {
+    color: white;
+    border: 1px solid white;
+    height: 61px;
+    padding-top: 0;
+    left: -10px;
+}
+
+.nav-collapse {
+    position: relative;
+}
+
+/* Header */
+
+.masthead {
+/*     background-image: url('../images/photo2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    color: white;
+    height: 780px;
+    position: relative;
+    background-color: rgba(3, 58, 161, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.subhead {
+    background-image: url('../images/photo2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    color: white;
+    min-height: 460px;
+    position: relative;
+    background-color: rgb(3, 58, 161);
+    display: flex;
+    align-items: center;
+}
+
+.masthead .video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.masthead iframe {
+    min-width: 100%;
+    height: 780px;
+    object-fit: cover;
+}
+  
+.masthead .container {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+  }
+  
+.masthead .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.589);
+    z-index: 1;
+  }
+ 
+.inform-section {
+    display: flex;
+    justify-content: center;
+}
+
+.blockquote {
+    position: relative;
+}
+
+.blockquote::before {
+    font-family: "FontAwesome"; 
+    font-weight: normal; 
+    content: '\f10d';
+    left: 19%;
+    top: -10px;
+    position: absolute;
+} 
+
+.blockquote::after {
+    font-family: "FontAwesome"; 
+    font-weight: normal; 
+    content: '\f10e';
+    position: absolute;
+    right: 19%;
+    top: -10px;
+}
+
+.page-section .blockquote-footer {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.75;
+}
+
+.events-listing {
+    background-color: rgba(221, 88, 55, 0.2);
+    color: #053086;
+}
+
+.events-listing .event-wrap {
+    padding-top: 8%;
+}
+
+.events-listing .figure-caption {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #053086;
+    padding: 5px;
+    font-style: italic;
+}
+
+.events-listing .btn {
+    position: relative;
+    border: none;
+    color: rgb(209, 84, 65);
+    font-weight: 600;
+}
+
+.events-listing .btn::before {
+    content:'';
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    background: rgb(209, 84, 65);
+    height: 1px;
+    display: block;
+    width: 170px;
+}
+
+#event-carousel .carousel-item span {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: #053086;
+}
+
+#event-carousel .carousel-item .event-photo {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#event-carousel .carousel-item .event-photo figure {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#event-carousel .carousel-item .figure img {
+    height: 400px;
+}
+
+.experiences-sharing .container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.experiences-sharing h2 {
+    color: #f8f8f8;
+    line-height: 1.5;
+    text-transform: none;
+    font-size: 7.175rem;
+    letter-spacing: 0.025em;
+    font-weight: normal;
+} 
+
+.experiences-sharing .sub-text {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.experiences-sharing .sub-text span {
+    padding: 0 3%;
+}
+
+.experiences-sharing .sub-text::after, .sub-text::before {
+    border: 1px solid rgba(201, 139, 110, 0.5); 
+    content: "";
+    flex: 1;
+}
+
+.experience-details .col-md-3 {
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 620px;
+}
+
+.experience-details {
+    padding: 0;
+}
+
+.experience-details .container {
+    max-width: 100%;
+    overflow: hidden;
+    padding:0;
+}
+
+.experience-details .title {
+    position: absolute;
+    width: 100%;
+    padding: 0 20px 0 58px;
+    top: 54px;
+}
+
+.experience-details .title a {
+    color: white;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 1.5px;
+    font-size: 1.5rem;
+}
+
+.footer-section {
+    background-color: #053086;
+    padding: 35px 0 0 0;
+}
+
+.footer-section .container{
+    max-width: 100%;
+    overflow: hidden;
+    padding:0;
+}
+
+.footer-section .logo {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo:before, .logo:after {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    content: "";
+    flex: 1;
+}
+
+.footer-section .contact-us .btn {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.footer-section .footer-nav {
+    width: 100%;
+    padding: 28px 0 20px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.footer-nav .contacts {
+    padding-left: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav .contacts .fas {
+    padding-left: 2rem;
+}
+
+.footer-nav .social {
+    padding-right: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-nav .contact-label, .social-label{
+    color: white;
+    font-size: 1rem;
+}
+
+.footer-nav .contacts a.btn {
+    text-align: left;
+    display: inline-block;
+    width: 70%;
+    height: 54px;
+    border: 1px solid #ffffff;
+    font-size: 12px;
+    padding: 0px 5px;
+    color: #ffffff;
+    position: relative;
+    letter-spacing: .25px;
+    line-height: 55px;
+    margin-top: 10px;
+}
+
+.footer-section .footer-nav::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: white;
+}
+
+.footer-section .footer-menus {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer-section .footer-menus a{
+    text-transform: uppercase;
+    color: white;
+    padding: 0 30px
+}
+
+.footer-section .footer-nav .social-buttons{
+    font-size: 1.25rem;
+    display: flex;
+    align-self: flex-end;
+}
+
+.footer-section .footer-nav .social-buttons i{
+    color: white;
+}
+
+.footer-section .copyright-section {
+    padding: 10px 0 10px;
+    width: 100%;
+    background-color: rgb(2, 39, 88);
+}
+
+.footer-section .copyright-section .copyright {
+    color: white;
+    font-size: 0.80rem;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 450px) {
+
+    nav.navbar-section {
+        top: 12px;
+    }
+
+    .navbar .navbar-brand {
+        top: -12px;
+        left: auto;
+        right: -45%;
+    }
+
+    .navbar .navbar-brand img {
+        height: 90px;
+    }
+
+    .navbar .wrap-nav {
+        top: 76px;
+        width: 52%;
+        position: absolute;
+        left: 0;
+    }
+
+    .navbar .navbar-nav {
+        background-color: #053086;
+        width: 220px;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        padding-left: 104px;
+    }
+
+    .masthead {
+        height: 320px;
+    }
+
+    .masthead h1 {
+        font-size: 1.3rem;
+    }
+
+    .masthead iframe {
+        width: 100%;
+        height: 320px;
+    }
+
+    .blockquote::before {
+        left: -2%;
+    }
+
+    .blockquote::after {
+        right: 18%;
+        top: 23px;
+    }
+
+    #event-carousel .carousel-item span {
+        font-size: 1.8rem;
+    }
+
+    .events-listing .btn {
+        padding-bottom: -2rem;
+    }
+
+    #event-carousel .carousel-item .event-photo figure {
+        padding-top: 0.5rem;
+    }
+
+    .events-listing .figure-caption {
+        padding-left: 5%;
+    }
+
+    .experiences-sharing h2 {
+        line-height: 0.4;
+        font-size: 2.175rem;
+    }
+
+    .experiences-sharing .sub-text {
+        width: 95%;
+    }
+
+    .experiences-sharing .sub-text span {
+        font-size: 0.9rem;
+        margin-top: -3%;
+    }
+
+    .experience-details .title {
+        padding: 0;
+    }
+
+    .experience-details .col-md-3 {
+        width: 50%;
+    }
+
+    .experience-details .title a {
+        font-size: 1rem;
+    }
+
+    .footer-nav .contacts {
+        padding-left: 1%;
+        width: 70%;
+    }
+
+    .footer-nav .contacts a.btn {
+        width: 80%;
+    }
+
+    .footer-nav .social {
+        padding-right: 1%;
+        width: 30%;
+    }
+
+    .footer-nav .contacts .fas {
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 450px){
+
+    nav.navbar-section {
+        top: 12px;
+    }
+
+    .navbar .navbar-brand img {
+        height: 95px;
+    }
+
+    .navbar .navbar-brand {
+        top: -16px;
+        left: auto;
+        right: -17%;
+    }
+
+    .navbar .wrap-nav {
+        top: 76px;
+        width: 43%;
+        position: absolute;
+        left: 0;
+    }
+
+    .navbar .navbar-nav {
+        background-color: #053086;
+        width: 220px;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        padding-left: 93px;
+    }
+
+    .masthead {
+        height: 350px;
+    }
+
+    .masthead h1 {
+        font-size: 1.5rem;
+    }
+
+    .masthead iframe {
+        width: 100%;
+        height: 350px;
+    }
+
+    .blockquote::before {
+        left: -2%;
+    }
+
+    .blockquote::after {
+        right: -2%;
+    }
+
+    #event-carousel .carousel-item span {
+        font-size: 1.9rem;
+    }
+
+    .events-listing .btn {
+        padding-bottom: -2rem;
+    }
+
+    #event-carousel .carousel-item .event-photo figure {
+        padding-top: 2rem;
+    } 
+
+    .events-listing .figure-caption {
+        padding-left: 5%;
+    }
+
+    .experiences-sharing h2 {
+        line-height: 0.4;
+        font-size: 3.3rem;
+    }
+
+    .experiences-sharing .sub-text {
+        width: 95%;
+    }
+
+    .experiences-sharing .sub-text span {
+        font-size: 1.2rem;
+        margin-top: -2%;
+        padding: 0 2px;
+    }
+
+    .experience-details .col-md-3 {
+        width: 50%;
+    }
+
+    .experience-details .title a {
+        font-size: 1rem;
+    }
+
+    .footer-nav .contacts {
+        padding-left: 2%;
+        width: 70%;
+    }
+
+    .footer-nav .contacts a.btn {
+        width: 70%;
+    }
+
+    .footer-nav .social {
+        padding-right: 2%;
+        width: 30%;
+    }
+
+}
+
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+
+    nav.navbar-section {
+        top: 12px;
+    }
+
+    .navbar .navbar-brand img {
+        height: 100px;
+    }
+
+    .navbar .navbar-brand {
+        top: -21px;
+        left: auto;
+        right: 2%;
+    }
+
+    .navbar .wrap-nav {
+        top: 76px;
+        width: 31%;
+        position: absolute;
+        left: 0;
+    }
+
+    .navbar .navbar-nav {
+        background-color: #053086;
+        width: 220px;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        padding-left: 93px;
+    }
+
+    .masthead {
+        height: 400px;
+    }
+
+    .masthead h1 {
+        font-size: 1.7rem;
+    }
+
+    .masthead iframe {
+        width: 100%;
+        height: 400px;
+    }
+
+    .blockquote::before {
+        left: -10%;
+    }
+
+    .blockquote::after {
+        right: -10%;
+    }
+
+    #event-carousel .carousel-item span {
+        font-size: 2rem;
+    }
+
+    .events-listing .btn {
+        padding-bottom: -2rem;
+    }
+
+    #event-carousel .carousel-item .event-photo figure {
+        padding-top: 2rem;
+    } 
+
+    .events-listing .figure-caption {
+        padding-left: 5%;
+    }
+
+    .experiences-sharing h2 {
+        line-height: 0.5;
+        font-size: 4.1rem;
+        letter-spacing: 0.015em;
+    }
+
+    .experiences-sharing .sub-text {
+        width: 95%;
+    }
+
+    .experiences-sharing .sub-text span {
+        font-size: 1.2rem;
+        margin-top: -2%;
+        padding: 0 2px;
+    }
+
+
+    .experience-details .col-md-3 {
+        width: 50%;
+    }
+
+    .experience-details .title a {
+        font-size: 1.25rem;
+    }
+
+    .experience-details .title {
+        padding: 0 10px 0 10px;
+    }
+
+    .footer-nav .contacts {
+        padding-left: 5%;
+        width: 62%;
+    }
+
+    .footer-nav .contacts a.btn {
+        width: 80%;
+    }
+
+    .footer-nav .social {
+        padding-right: 5%;
+        width: 30%;
+    }
+
+}
+
+@media only screen and (max-width: 990px) and (min-width: 768px) {
+
+    .masthead {
+        height: 540px;
+    }
+
+    .masthead iframe {
+        width: 100%;
+        height: 540px;
+    }
+
+    nav.navbar-section {
+        top: 16px;
+    }
+
+    .navbar .navbar-brand {
+        top: -32px;
+        left: auto;
+        right: 23%;
+    }
+
+    .navbar .wrap-nav {
+        top: 76px;
+        width: 26%;
+        position: absolute;
+        left: 0;
+    }
+
+    .navbar .navbar-nav {
+        background-color: #053086;
+        width: 220px;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        padding-left: 93px;
+    }
+
+    .blockquote::before {
+        left: 1%;
+    }
+
+    .blockquote::after {
+        right: 1%;
+    }
+
+    #event-carousel .carousel-item span {
+        font-size: 2rem;
+    }
+
+    .experiences-sharing h2 {
+        line-height: 1;
+        font-size: 5.2rem;
+        letter-spacing: 0.040em;
+    }
+
+    .experiences-sharing .sub-text {
+        width: 95%;
+    }
+
+    .experiences-sharing .sub-text span {
+        font-size: 1.5rem;
+        margin-top: -2%;
+        padding: 0 2px;
+    }
+
+    .experience-details .title a {
+        font-size: 1.25rem;
+    }
+
+    .experience-details .title {
+        padding: 0 10px 0 10px;
+    }
+
+    .footer-nav .contacts {
+        padding-left: 10%;
+        width: 70%;
+    }
+
+    .footer-nav .contacts a.btn {
+        width: 90%;
+    }
+
+    .footer-nav .social {
+        padding-right: 10%;
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 1150px) and (min-width: 990px) {
+    .masthead {
+        height: 630px;
+    }
+
+    .masthead iframe {
+        width: 100%;
+        height: 630px;
+    }
+}

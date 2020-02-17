@@ -1,0 +1,25 @@
+#sitemap {
+    background: 
+    linear-gradient(
+        rgba(216, 144, 126, 0.855), 
+        rgba(216, 144, 126, 0.855)
+    ),url('../images/Events/background-4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.sitemap-wrap {
+    margin-top: 8%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sitemap-wrap a {
+    font-size: 2rem;
+    line-height: 1.5;
+    letter-spacing: 0.125;
+    color: white;
+}
